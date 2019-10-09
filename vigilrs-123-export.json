@@ -1,0 +1,303 @@
+{
+  
+  "users" : {
+	  	"teachers" : {
+	  		"navid" : {
+		      "Timestamp" : "4/16/2018 10:34:32",
+		      "Which founder invited you?" : "Nish Ullagadi",
+		      "email" : "navid@scu.edu",
+		      "name" : "Navid Shaghaghi",
+		      "number" : 6506506500,
+		      "residence" : "On Campus",
+		      "latitude" : 37.356108, 
+		      "longitude" : -121.975236,
+		      "status" : "safe",
+		      "room" : "0",
+		      "headcount" : "0"
+		    },
+		    "appleby" : {
+		      "Timestamp" : "4/16/2018 10:34:32",
+		      "Which founder invited you?" : "Nish Ullagadi",
+		      "email" : "navid@scu.edu",
+		      "name" : "Glenn Appleby",
+		      "number" : 6506506500,
+		      "residence" : "On Campus",
+		      "latitude" : 37.376108, 
+		      "longitude" : -121.965236,
+		      "status" : "safe",
+		      "room" : "70",
+		      "headcount" : "0"
+		    },
+		    "lewis" : {
+		      "Timestamp" : "4/16/2018 10:34:32",
+		      "Which founder invited you?" : "Nish Ullagadi",
+		      "email" : "navid@scu.edu",
+		      "name" : "Navid Shaghaghi",
+		      "number" : 6506506500,
+		      "residence" : "On Campus",
+		      "latitude" : 37.350108, 
+		      "longitude" : -121.955236,
+		      "status" : "safe",
+		      "room" : "60",
+		      "headcount" : "0"
+		    }
+	  	},
+
+	  	"students" : {
+	  		"eejohnson" : {
+		      "Timestamp" : "4/24/2018 1:43:08",
+		      "Which founder invited you?" : "Adi Bhatia",
+		      "email" : "eejohnson@scu.edu",
+		      "graduatingYear" : "6/15/2020",
+		      "name" : "Evan Johnson",
+		      "number" : "818 257 2256",
+		      "residence" : "On Campus",
+		      "latitude" : 37.34329993, 
+		      "longitude" : -121.93258113,
+		      "status" : "safe"
+		    },
+		    "dcasey" : {
+		      "Timestamp" : "4/24/2018 1:43:08",
+		      "Which founder invited you?" : "Adi Bhatia",
+		      "email" : "dcasey@scu.edu",
+		      "graduatingYear" : "6/15/2020",
+		      "name" : "Darran Casey",
+		      "number" : "818 257 2256",
+		      "residence" : "On Campus",
+		      "latitude" : 37.34329993, 
+		      "longitude" : -121.93258113,
+		      "status" : "safe"
+		    },
+		    "dspatel" : {
+		      "Timestamp" : "4/24/2018 22:25:00",
+		      "Which founder invited you?" : "Nish Ullagadi",
+		      "email" : "dspatel@scu.edu",
+		      "graduatingYear" : "6/1/2021",
+		      "name" : "Dylan Patel",
+		      "number" : 4089141140,
+		      "residence" : "On Campus",
+		      "latitude" : 37.36061782, 
+		      "longitude" : -121.92352055,
+		      "status" : "safe"
+		    },
+		    "ggosal" : {
+		      "Timestamp" : "4/16/2018 13:40:57",
+		      "Which founder invited you?" : "Nish Ullagadi",
+		      "email" : "ggosal@scu.edu",
+		      "graduatingYear" : "6/20/2019",
+		      "name" : "Gurmukh Gosal Jr",
+		      "number" : 9162964235,
+		      "residence" : "Off Campus",
+		      "latitude" : 37.32927279, 
+		      "longitude" : -121.94704593,
+		      "status" : "safe"
+		    },
+		    "jladhad" : {
+		      "Timestamp" : "4/27/2018 14:18:09",
+		      "Which founder invited you?" : "Adi Bhatia",
+		      "email" : "jladhad@scu.edu",
+		      "graduatingYear" : "6/15/2021",
+		      "name" : "Jay Ladhad",
+		      "number" : 4085078072,
+		      "residence" : "On Campus",
+		      "latitude" : 37.33530543, 
+		      "longitude" : -121.92043567,
+		      "status" : "safe"
+		    },
+		    "jluo1" : {
+		      "Timestamp" : "5/8/2018 12:04:22",
+		      "Which founder invited you?" : "Evan Johnson",
+		      "email" : "jluo1@scu.edu",
+		      "graduatingYear" : "6/1/2020",
+		      "name" : "Jiabei Luo",
+		      "number" : 6506276206,
+		      "residence" : "On Campus",
+		      "latitude" : 37.36105244, 
+		      "longitude" : -121.95713553,
+		      "status" : "safe"
+		    },
+		    "jmajors" : {
+		      "Timestamp" : "5/17/2018 0:37:25",
+		      "Which founder invited you?" : "Evan Johnson",
+		      "email" : "jmajors@scu.edu",
+		      "graduatingYear" : "6/19/2020",
+		      "name" : "Justin Majors",
+		      "number" : 4085154968,
+		      "residence" : "On Campus",
+		      "latitude" : 37.33320091, 
+		      "longitude" : -121.93577586,
+		      "status" : "safe"
+		    },
+		    "jrcollins" : {
+		      "Timestamp" : "5/6/2018 12:34:33",
+		      "Which founder invited you?" : "Harshan Aravindakshan",
+		      "email" : "jrcollins@scu.edu",
+		      "graduatingYear" : "6/10/2020",
+		      "name" : "Jeffrey Collins",
+		      "number" : 4086055903,
+		      "residence" : "On Campus",
+		      "latitude" : 37.35248981, 
+		      "longitude" : -121.95111746,
+		      "status" : "safe"
+		    },
+		    "kboehnlein" : {
+		      "Timestamp" : "5/2/2018 21:37:47",
+		      "Which founder invited you?" : "Adi Bhatia",
+		      "email" : "kboehnlein@scu.edu",
+		      "graduatingYear" : "6/16/2018",
+		      "name" : "Kevin Boehnlein",
+		      "number" : 5039298778,
+		      "residence" : "On Campus",
+		      "latitude" : 37.352226, 
+		      "longitude" : -121.955236,
+		      "status" : "safe"
+		    },
+		    "klohani" : {
+		      "Timestamp" : "4/27/2018 14:40:31",
+		      "Which founder invited you?" : "Adi Bhatia",
+		      "email" : "klohani@scu.edu",
+		      "graduatingYear" : "6/15/2019",
+		      "name" : "Krishanu Lohani",
+		      "number" : 4085057634,
+		      "residence" : "On Campus",
+		      "latitude" : 37.356108, 
+		      "longitude" : -121.935236,
+		      "status" : "safe"
+		    },
+		    "msingh4" : {
+		      "Timestamp" : "4/17/2018 10:58:23",
+		      "Which founder invited you?" : "Nish Ullagadi",
+		      "email" : "msingh4@scu.edu",
+		      "graduatingYear" : "6/14/2021",
+		      "name" : "Malika Singh",
+		      "number" : 4088596038,
+		      "residence" : "On Campus",
+		      "latitude" : 37.353108, 
+		      "longitude" : -121.965236,
+		      "status" : "safe"
+		    },
+		    "n2sharma" : {
+		      "Timestamp" : "4/27/2018 14:32:06",
+		      "Which founder invited you?" : "Adi Bhatia",
+		      "email" : "n2sharma@scu.edu",
+		      "graduatingYear" : "3/15/2019",
+		      "name" : "Neha Sharma",
+		      "number" : 4086749434,
+		      "residence" : "Off Campus",
+		      "latitude" : 37.352108, 
+		      "longitude" : -121.950236,
+		      "status" : "safe"
+		    },
+		    "nvtran" : {
+		      "Timestamp" : "5/8/2018 16:13:43",
+		      "Which founder invited you?" : "Evan Johnson",
+		      "email" : "nvtran@scu.edu",
+		      "graduatingYear" : "6/15/2020",
+		      "name" : "Nam Tran",
+		      "number" : 6503877198,
+		      "residence" : "Off Campus",
+		      "latitude" : 37.357108, 
+		      "longitude" : -121.965236,
+		      "status" : "safe"
+		    },
+		    "polavarrieta" : {
+		      "Timestamp" : "4/16/2018 11:22:16",
+		      "Which founder invited you?" : "Nish Ullagadi",
+		      "email" : "polavarrieta@scu.edu",
+		      "graduatingYear" : "6/10/2021",
+		      "name" : "Pablo Olavarrieta",
+		      "number" : 5039545884,
+		      "residence" : "On Campus",
+		      "latitude" : 37.356108, 
+		      "longitude" : -121.952236,
+		      "status" : "safe"
+		    },
+		    "rku" : {
+		      "Timestamp" : "5/4/2018 14:12:23",
+		      "Which founder invited you?" : "Harshan Aravindakshan",
+		      "email" : "rku@scu.edu",
+		      "graduatingYear" : "6/15/2020",
+		      "name" : "Ryan Ku",
+		      "number" : 6505245663,
+		      "residence" : "On Campus",
+		      "latitude" : 37.364108, 
+		      "longitude" : -121.947236,
+		      "status" : "safe"
+		    },
+		    "rpannkuk" : {
+		      "Timestamp" : "4/29/2018 17:46:09",
+		      "Which founder invited you?" : "Adi Bhatia",
+		      "email" : "rpannkuk@scu.edu",
+		      "graduatingYear" : "6/13/2019",
+		      "name" : "Rory Quinn Pannkuk",
+		      "number" : 8057228598,
+		      "residence" : "Off Campus",
+		      "latitude" : 37.364108, 
+		      "longitude" : -121.925236,
+		      "status" : "safe"
+		    },
+		    "s3nguyen" : {
+		      "Timestamp" : "4/16/2018 15:39:59",
+		      "Which founder invited you?" : "Nish Ullagadi",
+		      "email" : "s3nguyen@scu.edu",
+		      "graduatingYear" : "6/10/2020",
+		      "name" : "Sophie Nguyen",
+		      "number" : 4156997634,
+		      "residence" : "On Campus",
+		      "latitude" : 37.334108, 
+		      "longitude" : -121.965236,
+		      "status" : "safe"
+		    },
+		    "shudnut" : {
+		      "Timestamp" : "5/7/2018 13:18:11",
+		      "Which founder invited you?" : "Harshan Aravindakshan",
+		      "email" : "shudnut@scu.edu",
+		      "graduatingYear" : "6/15/2020",
+		      "name" : "Seamus Hudnut",
+		      "number" : 9165089074,
+		      "residence" : "On Campus",
+		      "latitude" : 37.324108, 
+		      "longitude" : -121.995236,
+		      "status" : "safe"
+		    },
+		    "spacwa" : {
+		      "Timestamp" : "4/25/2018 15:12:23",
+		      "Which founder invited you?" : "Adi Bhatia",
+		      "email" : "spacwa@scu.edu",
+		      "graduatingYear" : "6/15/2019",
+		      "name" : "Stephen Pacwa",
+		      "number" : 6507663993,
+		      "residence" : "On Campus",
+		      "latitude" : 37.359108, 
+		      "longitude" : -121.965236,
+		      "status" : "safe"
+		      
+		    },
+		    "vaiyer" : {
+		      "Timestamp" : "5/4/2018 14:11:09",
+		      "Which founder invited you?" : "Harshan Aravindakshan",
+		      "email" : "vaiyer@scu.edu",
+		      "graduatingYear" : "6/16/2018",
+		      "name" : "Vishanth Iyer",
+		      "number" : 4086289736,
+		      "residence" : "Off Campus",
+		      "latitude" : 37.344108, 
+		      "longitude" : -121.945236,
+		      "status" : "safe"
+		    },
+		    "wboyden" : {
+		      "Timestamp" : "4/30/2018 20:52:20",
+		      "activation" : false,
+		      "Which founder invited you?" : "Adi Bhatia",
+		      "email" : "wboyden@scu.edu",
+		      "graduatingYear" : "6/15/2019",
+		      "name" : "Wilder Boyden",
+		      "number" : 5039148047,
+		      "residence" : "Off Campus",
+		      "latitude" : 37.364108, 
+		      "longitude" : -121.965236,
+		      "status" : "safe"
+		    }
+	 	}
+	 }
+}

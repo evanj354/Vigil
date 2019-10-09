@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>Firebase Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h1>Vigil</h1>
+    <h3 text-align="center">Student Authentication</h3>
+    <input type="email" placeholder="Email..." id="email_field" value = "ej9606@gmail.com"/>
+    <input type="password" placeholder="Password..." id="password_field" value = "soup101"/>
+
+    <button onclick="login()">Login to Account</button>
+    <br>
+    <button onclick="createUser()">Authenticate</button>
+    <br>
+    <button onclick="sendReset()">Send Password Reset Email</button>
+    <br>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3>Welcome User</h3>
+    <p id="user_para">Welcome to Firebase web login Example. You're currently logged in.</p>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAZMASVmLHKGFd4cn73sWslnmzb3v5te7g",
+      authDomain: "vigilrs-123.firebaseapp.com",
+      databaseURL: "https://vigilrs-123.firebaseio.com",
+      projectId: "vigilrs-123",
+      storageBucket: "vigilrs-123.appspot.com",
+      messagingSenderId: "562799414989"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="index.js"></script>
+  
+
+</body>
+</html>

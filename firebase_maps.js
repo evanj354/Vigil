@@ -1,0 +1,375 @@
+
+var config = {
+  apiKey: "AIzaSyAZMASVmLHKGFd4cn73sWslnmzb3v5te7g",
+  authDomain: "vigilrs-123.firebaseapp.com",
+  databaseURL: "https://vigilrs-123.firebaseio.com",
+  projectId: "vigilrs-123",
+  storageBucket: "vigilrs-123.appspot.com",
+  messagingSenderId: "562799414989"
+};
+firebase.initializeApp(config);
+
+// Get a reference to the database service
+var database = firebase.database();
+
+var reference = database.ref('users/students');
+
+
+var safeZones = [];
+var unsafeZones = [];
+var student_info = [];
+var my_map = 0;
+reference.on("value", function(user_names){
+    var length = user_names.numChildren();
+    var count = 0;
+
+    user_names.forEach(function(user_info){
+        student_info[count++]= [user_info.child("/name").val(), user_info.child("/status").val() , user_info.child("/latitude").val(), user_info.child("/longitude").val()];
+    });
+    initMap();
+});
+
+
+function initMap() {
+    if(!student_info.length){
+        return;
+    }
+
+    my_map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 14,
+        center: new google.maps.LatLng(37.349642, -121.938987),
+        
+        styles: [
+            {
+                "elementType": "geometry",
+                "stylers": [{
+                    "color": "#1d2c4d"
+                }]
+            },
+            {
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                    "color": "#8ec3b9"
+                }]
+            },
+            {
+                "elementType": "labels.text.stroke",
+                "stylers": [{
+                    "color": "#1a3646"
+                }]
+            },
+            {
+                "featureType": "administrative.country",
+                "elementType": "geometry.stroke",
+                "stylers": [{
+                    "color": "#4b6878"
+                }]
+            },
+            {
+                "featureType": "administrative.land_parcel",
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                    "color": "#64779e"
+                }]
+            },
+            {
+                "featureType": "administrative.province",
+                "elementType": "geometry.stroke",
+                "stylers": [{
+                    "color": "#4b6878"
+                }]
+            },
+            {
+                "featureType": "landscape.man_made",
+                "elementType": "geometry.stroke",
+                "stylers": [{
+                    "color": "#334e87"
+                }]
+            },
+            {
+                "featureType": "landscape.natural",
+                "elementType": "geometry",
+                "stylers": [{
+                    "color": "#023e58"
+                }]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "geometry",
+                "stylers": [{
+                    "color": "#283d6a"
+                }]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                    "color": "#6f9ba5"
+                }]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "labels.text.stroke",
+                "stylers": [{
+                    "color": "#1d2c4d"
+                }]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "geometry.fill",
+                "stylers": [{
+                    "color": "#023e58"
+                }]
+            },
+            {
+                "featureType": "poi.park",
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                    "color": "#3C7680"
+                }]
+            },
+            {
+                "featureType": "road",
+                "elementType": "geometry",
+                "stylers": [{
+                    "color": "#304a7d"
+                }]
+            },
+            {
+                "featureType": "road",
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                    "color": "#98a5be"
+                }]
+            },
+            {
+                "featureType": "road",
+                "elementType": "labels.text.stroke",
+                "stylers": [{
+                    "color": "#1d2c4d"
+                }]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry",
+                "stylers": [{
+                    "color": "#2c6675"
+                }]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry.stroke",
+                "stylers": [{
+                    "color": "#255763"
+                }]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                    "color": "#b0d5ce"
+                }]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "labels.text.stroke",
+                "stylers": [{
+                    "color": "#023e58"
+                }]
+            },
+            {
+                "featureType": "transit",
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                    "color": "#98a5be"
+                }]
+            },
+            {
+                "featureType": "transit",
+                "elementType": "labels.text.stroke",
+                "stylers": [{
+                    "color": "#1d2c4d"
+                }]
+            },
+            {
+                "featureType": "transit.line",
+                "elementType": "geometry.fill",
+                "stylers": [{
+                    "color": "#283d6a"
+                }]
+            },
+            {
+                "featureType": "transit.station",
+                "elementType": "geometry",
+                "stylers": [{
+                    "color": "#3a4762"
+                }]
+            },
+            {
+                "featureType": "water",
+                "elementType": "geometry",
+                "stylers": [{
+                    "color": "#0e1626"
+                }]
+            },
+            {
+                "featureType": "water",
+                "elementType": "labels.text.fill",
+                "stylers": [{
+                    "color": "#4e6d70"
+                }]
+            }
+		]
+        
+    });
+    var marker, i;
+
+    console.log("entering for loop");
+    for (i = 0; i < student_info.length; ++i) {
+        if(student_info[i][1] == "safe"){
+            marker=new google.maps.Marker({
+                position: new google.maps.LatLng(student_info[i][2],student_info[i][3]),
+                map: my_map,
+                title: student_info[i][0],
+                icon:{
+					url: 'green-dot.png',
+					scaledSize: new google.maps.Size(27,27),
+                    anchor: new google.maps.Point(16,16),
+                    origin: new google.maps.Point(0,0)
+				}
+            });
+        }
+        else{
+            if(i==7){
+                marker=new google.maps.Marker({
+                    position: new google.maps.LatLng(student_info[i][2],student_info[i][3]),
+                    map: my_map,
+                    title: student_info[i][0],
+                    icon: {
+    					url: 'blue-dot.png',
+    					scaledSize: new google.maps.Size(16, 16),
+                        anchor: new google.maps.Point(10,10),
+                        origin: new google.maps.Point(0,0)
+    				}
+                });
+            }
+            else{     
+                marker=new google.maps.Marker({
+                    position: new google.maps.LatLng(student_info[i][2],student_info[i][3]),
+                    map: my_map,
+                    title: student_info[i][0],
+                    icon: {
+    					url: 'red-dot.png',
+    					scaledSize: new google.maps.Size(16, 16),
+                        anchor: new google.maps.Point(10,10),
+                        origin: new google.maps.Point(0,0)
+    				}
+                });
+            }
+        }
+
+        var prev_infowindow = false;
+
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function(){
+                if(prev_infowindow){
+                    prev_infowindow.close();
+                }
+
+                prev_infowindow = new google.maps.InfoWindow({
+                  content: student_info[i][0] + ' is ' + student_info[i][1]
+                });
+
+                prev_infowindow.open(my_map, marker);
+            }
+        })(marker, i));
+    }
+
+    addZones();
+
+}
+
+function toggleSafeZones(){
+    for(i=0; i<safeZones.length; i++){
+        if(safeZones[i].visible){
+            safeZones[i].setMap(null);
+            safeZones[i].visible = false;
+        }
+        else{
+            safeZones[i].visible = true;
+            safeZones[i].setMap(my_map);
+            
+        }
+    }
+}
+
+function toggleUnsafeZones(){
+    for(i=0; i<unsafeZones.length; i++){
+        if(unsafeZones[i].visible){
+            unsafeZones[i].setMap(null);
+            unsafeZones[i].visible = false;
+        }
+        else{
+            unsafeZones[i].visible = true;
+            unsafeZones[i].setMap(my_map);
+            
+        }
+    }
+}
+
+function addZones(){
+    if(!student_info.length){
+        return;
+    }
+    
+    var i;
+    var safeZoneCoords = [];
+    
+    
+    for(i=0; i<student_info.length; i++){
+        if(student_info[i][1] == "safe"){
+            safeZoneCoords.push({lat: student_info[i][2], lng: student_info[i][3]});
+        }
+        if(safeZoneCoords.length == 4){
+            var safeZone = new google.maps.Polygon({
+              paths: safeZoneCoords,
+              strokeColor: '#5cd65c',
+              strokeOpacity: 0.8,
+              strokeWeight: 2,
+              fillColor: '#5cd65c',
+              // editable: true,
+              fillOpacity: 0.35
+            });
+            safeZone.setMap(my_map);
+            safeZones.push(safeZone);
+            safeZoneCoords.length = 0;
+        }
+    }
+    
+    //removeSafeZones(safeZones);
+    
+    
+     // Define the LatLng coordinates for the polygon's path.
+    var unsafeZoneCoords = [
+      {lat: 37.33454776, lng: -121.94893202},
+      {lat: 37.32454776, lng: -121.93893202},
+      {lat: 37.35454776, lng: -121.95893202},
+      {lat: 37.34454776, lng: -121.96893202},
+    ];
+
+    // Construct the polygon.
+    var unsafeZone = new google.maps.Polygon({
+      paths: unsafeZoneCoords,
+      strokeColor: '#FF0000',
+      strokeOpacity: 0.8,
+      strokeWeight: 2,
+      fillColor: '#FF0000',
+      // editable: true,
+      fillOpacity: 0.35
+    });
+    
+    unsafeZones.push(unsafeZone);
+
+    unsafeZone.setMap(my_map);
+
+}

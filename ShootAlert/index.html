@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://media.twiliocdn.com/sdk/js/common/v0.1/twilio-common.min.js"></script>
+    <script type="text/javascript" src="chatbot.js"></script>
   <script src="https://media.twiliocdn.com/sdk/js/chat/v2.0/twilio-chat.min.js"></script>
     <style type="text/css">
       .row {
@@ -39,7 +40,29 @@
     <div class="container">
     <div class="row">
       <div class="col-sm" style="height: 200px">
-        <div class="messaging"></div>
+        <div class="messaging">
+          <?php
+          /*** mysql hostname ***/
+            $hostname = 'localhost';
+            /*** mysql username ***/
+            $username = 'id4944238_alerts';
+            /*** mysql password ***/
+            $password = 'shootalert';
+            /*** database name ***/
+            $db_name = 'id4944238_alerts';
+
+            try { $dbh = new PDO("mysql:host=$hostname;dbname=$db_name", $username, $password); }
+            catch(PDOException $e) { echo $e->getMessage(); }
+          ?>
+          <div class="form-group">
+            <label for="usr">Question</label>
+            <input type="text" class="form-control" id="question" value="Ask your question here" onclick="disappear()">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Answer</label>
+            <input type="password" class="form-control" id="answer">
+          </div>
+        </div>
       </div>
       <div class="col-sm" style="height: 340px">
         <div class="map"></div>

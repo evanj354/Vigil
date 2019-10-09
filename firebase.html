@@ -1,0 +1,30 @@
+
+<html>
+   <head>
+      <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+      <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyDbeQIWyM2ZlksKy5fnAt3yM5vBn-svZP4",
+          authDomain: "vigil-bd235.firebaseapp.com",
+          databaseURL: "https://vigil-bd235.firebaseio.com",
+          projectId: "vigil-bd235",
+          storageBucket: "vigil-bd235.appspot.com",
+          messagingSenderId: "467457723673"
+        };
+        firebase.initializeApp(config);
+      </script>
+      <script src = "https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+      <script type = "text/javascript" src = "index.js"></script>
+
+   </head>
+      
+
+   <body>
+      <input type="text" name="email" placeholder="user@email.com"><br>
+      <input type="text" name="password" placeholder="password"><br>
+      <input type="text" name="password" placeholder="confirm password"><br>
+
+      <button onclick="submit()">Login</button>
+   </body>
+</html>

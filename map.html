@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+      #map {
+          height: 1000px;
+          width: 100%;
+      }
+      .slidecontainer {
+        width: 100%;
+      }
+
+      .slider {
+          -webkit-appearance: none;
+          width: 100%;
+          height: 25px;
+          background: #d3d3d3;
+          outline: none;
+          opacity: 0.7;
+          -webkit-transition: .2s;
+          transition: opacity .2s;
+      }
+
+      .slider:hover {
+          opacity: 1;
+      }
+
+      .slider::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 25px;
+          height: 25px;
+          background: #4CAF50;
+          cursor: pointer;
+      }
+
+      .slider::-moz-range-thumb {
+          width: 25px;
+          height: 25px;
+          background: #4CAF50;
+          cursor: pointer;
+      }
+    </style>
+    <script src="fire.js"></script>
+    <script src="teacher_maps.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0Oft58Xy_ABt9PMh9A7OmgqdqHZnS-S4&callback=initMap"></script>
+</head>
+
+<body style="background:darkgray;">
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+<style>
+
+</style>
+  <title></title>
+</head>
+<body>
+  <form>
+    Room #:<br>
+    <input type="text" name="room_number" value="0">
+    <br>
+    <br>
+    Safe?:
+    <input type="radio" name="yes_no" value="safe">Yes</input>
+    <input type="radio" name="yes_no" value="unsafe" checked>No</input>
+    <br><br>
+      <p>Headcount?</p>
+    <div>
+      1<input type="range" name="headcount" min="1" max="100" value="50">100
+    </div>
+    <br>
+    <input type="submit" value="Submit" onclick="updateStatus()">
+  </form> 
+</body>
+</html>
+    
+
+</body></html>

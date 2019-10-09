@@ -1,0 +1,49 @@
+<html>
+<head>
+  <title>Firebase Authentication</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h1>Vigil Authentication</h1>    
+    <h3 text-align="center">Student Authentication</h3>
+    <h4>Users Not Authenticated<h4>
+
+    
+    <button onclick="authenticate()">Authenticate</button>
+    <br>
+    <button onclick="sendReset()">Send Password Reset Email</button> 
+  
+
+    <!-- <button onclick="login()">Login to Account</button>
+    <br>
+    <button onclick="authenticate()">Authenticate</button>
+    <br>
+    <button onclick="sendReset()">Send Password Reset Email</button>
+    <br> -->
+  </div>
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAZMASVmLHKGFd4cn73sWslnmzb3v5te7g",
+      authDomain: "vigilrs-123.firebaseapp.com",
+      databaseURL: "https://vigilrs-123.firebaseio.com",
+      projectId: "vigilrs-123",
+      storageBucket: "vigilrs-123.appspot.com",
+      messagingSenderId: "562799414989"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="authenticate.js"></script>
+  
+
+</body>
+</html>
+

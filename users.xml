@@ -1,0 +1,14 @@
+<people>
+	<person
+		<name>Joe</name>
+		<age>24</age>
+	</person>
+	<person
+		<name>Bill</name>
+		<age>27</age>
+	</person>
+	<person
+		<name>Tom</name>
+		<age>51</age>
+	</person>
+</people>

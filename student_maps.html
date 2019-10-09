@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #map {
+            height: 1000px;
+            width: 100%;
+        }
+    </style>
+    <script src="fire.js"></script>
+    <script src="firebase_maps.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0Oft58Xy_ABt9PMh9A7OmgqdqHZnS-S4&callback=initMap"></script>
+</head>
+
+<body style="background:darkgray;">
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <input type="button" value="Toggle Safe Zones" onclick="toggleSafeZones(); toggleUnsafeZones();">
+
+</html>
